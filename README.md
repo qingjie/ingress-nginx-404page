@@ -7,7 +7,9 @@ Ingress-nginx实现灰度金丝雀发布-Ingress-nginx自定义错误页面
 * https://github.com/kubesphere/tutorial
 
 ```
-eksctl delete cluster --name qzhao --region us-west-2
+eksctl create cluster --name qzhao --region us-west-2
+
+helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx
 
   helm install \
   cert-manager jetstack/cert-manager \
@@ -16,6 +18,7 @@ eksctl delete cluster --name qzhao --region us-west-2
   --set prometheus.enabled=false \
   --set webhook.timeoutSeconds=4 
   
+eksctl delete cluster --name qzhao --region us-west-2
 ```
 
 * https://github.com/qingjie/cert-manager-letsencrypt-4
