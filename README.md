@@ -16,3 +16,5 @@ eksctl delete cluster --name qzhao --region us-west-2
   --set webhook.timeoutSeconds=4 
   
 ```
+
+* https://github.com/qingjie/cert-manager-letsencrypt-4
